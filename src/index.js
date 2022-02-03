@@ -1,3 +1,11 @@
+import { buscarHeroe } from './js/callbacks.js';
 import './styles.css';
 
-console.log('Hello World');
+const heroeId = 'capi';
+
+
+buscarHeroe( heroeId, (heroe) => {
+    console.log( heroe )    
+});
+
+
