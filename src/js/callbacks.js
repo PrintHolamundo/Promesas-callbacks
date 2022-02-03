@@ -1,28 +1,32 @@
 const heroes = {
     capi: {
         nombre: 'Capitán América',
-        poder: 'Super fuerza'
+        poder: 'Aguantar inyecciones sin morir'
     },
     iron: {
         nombre: 'Ironman',
-        poder: 'Super armadura'
+        poder: 'Absurda cantidad de dinero'
     },
     spider: {
         nombre: 'Spiderman',
-        poder: 'Super telaraña'
-    }
+        poder: 'La mejor reacciona alergica a las picaduras de arañas'
+    },
 }
 
-export const buscarHeroe = (id, callback) => {
-    
-    const hero = heroes[id];
+// callback retorna...
+export const buscarHeroe = ( id, callback ) => {
 
-    if (hero) {
-       callback(null, hero);
+    const heroe = heroes[id];
+
+    if ( heroe ) {
+        callback( null, heroe );
     } else {
-        //error
-       callback(`No existe un heroe con el id ${id}`); 
-    }   
-    // callback(hero);
+        // Un error
+        callback(`No existe un héroe con el id ${ id }`);
+    }
+
+    // callback( heroe );
+
 
 }
+
