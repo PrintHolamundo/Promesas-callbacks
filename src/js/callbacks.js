@@ -17,6 +17,12 @@ export const buscarHeroe = (id, callback) => {
     
     const hero = heroes[id];
 
-    callback(hero);
+    if (hero) {
+       callback(null, hero);
+    } else {
+        //error
+       callback(`No existe un heroe con el id ${id}`); 
+    }   
+    // callback(hero);
 
 }
